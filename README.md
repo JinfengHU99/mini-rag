@@ -49,7 +49,6 @@ API Response
 ---
 
 ## Installation
-
 1. Clone the repository:
 
 ```bash
@@ -75,7 +74,7 @@ export OPENAI_API_KEY="your_api_key"
 # Windows
 setx OPENAI_API_KEY "your_api_key"
 ```
-##Usage
+## Usage
 
 1. Run the FastAPI server:
 ```bash
@@ -103,7 +102,7 @@ http://127.0.0.1:8000/docs
 ```
 ---
 
-##How It Works
+## How It Works
 
 **1. Text Splitting** — `textsplitter.py` splits long documents into chunks.  
 **2. Embedding** — `embedder.py`generates vector embeddings for each chunk.  
@@ -125,7 +124,7 @@ print(response.json())
 ```
 ---
 
-##Dependencies
+## Dependencies
 - `fastapi` — Web framework
 - `uvicorn` — ASGI server
 - `pydantic` — Data validation
@@ -135,7 +134,7 @@ print(response.json())
 
 ---
 
-##Notes / Tips
+## Notes / Tips
 - Replace `texts` in `app.py` with documents from the `data/` folder.   
 - Adjust `chunk_size` and `chunk_overlap` in `textsplitter.py` for your document length.   
 - Adjust `k` in `retriever.query` for the number of retrieved chunks.   
