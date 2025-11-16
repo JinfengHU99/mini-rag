@@ -1,0 +1,43 @@
+Mini RAG Project Documentation
+
+Mini RAG is a simplified Retrieval-Augmented Generation pipeline designed for educational and experimental purposes.
+Its goal is to demonstrate how modern AI systems combine vector search with large language models to produce more accurate and grounded responses.
+
+1. What is RAG?
+Retrieval-Augmented Generation (RAG) is an architecture that enhances language model outputs by retrieving relevant information from a document store.
+Instead of relying solely on the LLM’s internal knowledge, RAG systems fetch supporting context from external data sources, improving accuracy and reducing hallucinations.
+
+2. How Mini RAG Works
+The Mini RAG system consists of four major components:
+
+A. Text Splitting
+Incoming documents are divided into smaller chunks to make retrieval efficient.
+Smaller chunks help the system return only the relevant parts of the text.
+
+B. Embedding
+Each chunk is converted into a numerical vector using a sentence-transformer model.
+These vectors represent semantic meaning and allow similarity search.
+
+C. Retrieval
+A FAISS index is used to find chunks whose embeddings are most similar to the user’s query.
+This ensures that the LLM receives context that closely matches the question.
+
+D. Generation
+The retrieved text chunks and the user’s question are combined into a prompt.
+The LLM then produces a final answer grounded in the provided context.
+
+3. Why Use RAG?
+RAG systems offer several benefits:
+- Improved factual accuracy
+- Transparent use of external data
+- Ability to update knowledge instantly by replacing documents
+- Reduced hallucinations in LLM responses
+
+4. Example Use Cases
+Mini RAG can be applied to:
+- Question answering over long documents
+- Building custom knowledge-base chatbots
+- Summarizing domain-specific content
+- Searching academic or legal texts
+
+This example document is provided to help you test retrieval, embedding, and LLM interaction within the Mini RAG system.
